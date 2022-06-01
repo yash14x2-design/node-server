@@ -1,13 +1,14 @@
 
 var compression = require('compression')
 const express = require("express");
+const port = process.env.PORT || 3000;
 
 const app = express();
 app.use(compression())
 
 
-app.listen(3000, () => {
-  console.log("Application started and Listening on port 3000");
+app.listen(port, () => {
+  console.log("Application started and Listening on" + port);
 });
 
 
